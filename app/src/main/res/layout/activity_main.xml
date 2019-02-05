@@ -1,0 +1,172 @@
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context=".MainActivity"
+    android:keepScreenOn="true">
+
+<RelativeLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/RelativeViewOptions">
+    <TextView
+        android:id="@+id/clientIDTextView"
+        android:layout_width="73dp"
+        android:layout_height="29dp"
+        android:layout_alignBottom="@+id/clientId"
+        android:layout_alignParentStart="true"
+        android:text="client id:" />
+
+    <EditText
+        android:id="@+id/clientId"
+        android:layout_width="299dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignRight="@+id/clientIDTextView"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="client_android_1"
+        android:inputType="text" />
+
+    <TextView
+        android:id="@+id/serverIDView"
+        android:layout_width="73dp"
+        android:layout_height="29dp"
+        android:layout_alignBottom="@+id/serverId"
+        android:layout_alignParentStart="true"
+        android:text="server id:" />
+
+    <EditText
+        android:id="@+id/serverId"
+        android:layout_width="298dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/clientIDTextView"
+        android:ems="10"
+        android:hint="hostname"
+        android:inputType="text" />
+
+
+    <TextView
+        android:id="@+id/portIDView"
+        android:layout_width="73dp"
+        android:layout_height="29dp"
+        android:layout_alignBaseline="@+id/port"
+        android:layout_alignParentStart="true"
+        android:text="port:" />
+
+    <EditText
+        android:id="@+id/port"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="119dp"
+        android:layout_below="@+id/serverId"
+        android:ems="10"
+        android:hint="port"
+        android:inputType="number" />
+
+    <TextView
+        android:id="@+id/protocolView"
+        android:layout_width="73dp"
+        android:layout_height="29dp"
+        android:layout_alignBottom="@+id/radioGroup"
+        android:layout_alignParentStart="true"
+        android:text="Protocol:" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="189dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/port"
+        android:layout_marginTop="178dp"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/radioMQTT"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="MQTT" />
+
+        <RadioButton
+            android:id="@+id/radioHTTP"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="HTTP"
+            />
+    </RadioGroup>
+</RelativeLayout>
+<RelativeLayout
+    android:id="@+id/RelativeInfoView"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/RelativeViewOptions"
+    android:layout_marginTop="35dp"
+    android:visibility="invisible"
+    >
+    <TextView
+        android:id="@+id/BatteryMessageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:text="Battery Info when map was opened last time:" />
+
+    <TextView
+        android:id="@+id/BatteryTimeView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/BatteryMessageView"
+        android:layout_marginTop="10dp"
+        android:text="Time:" />
+    <TextView
+        android:id="@+id/BatteryLevelView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/BatteryTimeView"
+        android:layout_marginTop="10dp"
+        android:text="Battery Level:" />
+    <TextView
+        android:id="@+id/BatteryMessageView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/BatteryLevelView"
+        android:layout_marginTop="35dp"
+        android:text="Battery Info when map was stopped last time:" />
+
+    <TextView
+        android:id="@+id/BatteryTimeView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/BatteryMessageView2"
+        android:layout_marginTop="10dp"
+        android:text="Time:" />
+    <TextView
+        android:id="@+id/BatteryLevelView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/BatteryTimeView2"
+        android:layout_marginTop="10dp"
+        android:text="Battery Level:" />
+</RelativeLayout>
+
+    <Button
+        android:id="@+id/btnStartMap"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="12dp"
+        android:text="Start Map" />
+
+</RelativeLayout>

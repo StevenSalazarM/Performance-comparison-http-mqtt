@@ -1,0 +1,1 @@
+include ':app', ':paho.android.service', ':paho.client.mqtt'
