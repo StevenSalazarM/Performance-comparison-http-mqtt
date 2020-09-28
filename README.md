@@ -1,6 +1,6 @@
 # Performance comparison between HTTP and MQTT protocols for mobile applications
 
-## The problem
+## Problem
 Several mobile applications for industry usage requires to transmit data with a very high frequency. A typical use case are mobile applications used for movement monitoring, in which it is needed to trasmit the position of a device within intervals of 1-2 seconds. In this situtation, it is critical to optimize as much as possible data trasmission in order to prevent an excessive consumption in terms of bandwidth and power.
 <p>The same problem occurs in the many IoT scenarios, in which the device may not be a smartphone or a tablet but an Arduino board or Raspberry PI. The problem is even more pronounced in cases in which several devices have to synchronize their status based on the data trasmitted by one of them to the server (e.g. when it is needed to know the position of all and show it on a real time map).</p>
 <p>In this context the usage of the HTTP protocol (through REST services) results not optimal, for this reason, nowadays machine-2-machine protocols are becoming more popular in the IoT context.
@@ -8,7 +8,7 @@ One of the most promising protocols is MQTT, a protocol based on a publish/subsc
 <p>The goal of this thesis project is to verify the correct operation of the MQTT protocol through a real use case scenario, a mobile application that allows to visualize and monitor the position of different devices in a real time map and transmit its own position to a server.
 <br>The architecture of the project consists on a Java server (that works as Web Server implemented with Spring Boot), a MQTT broker created with Mosquitto, an Android application that can comunicate with the HTTP server or MQTT broker. The MQTT comunication is based on the open source library Eclipse/PAHO and the HTTP comunication is based on a set of REST services that allow to send the own position and retreive the position of other devices.</p>
 
-## The solution
+## Solution
 This repository contains an android application that allows to connect to a HTTP server or a MQTT server.
 The application is essentially based on 5 java classes and uses:
 - MQTT Eclipse/PAHO
